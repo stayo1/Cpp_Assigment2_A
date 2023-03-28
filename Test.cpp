@@ -32,7 +32,7 @@ TEST_CASE("game on")
     CHECK_THROWS(Game(sameplayer, sameplayer));
     CHECK_THROWS(first.printLastTurn());
     CHECK_THROWS(first.printLog());
-    CHECK_THROWS(first.playAll());
+    CHECK_NOTHROW(first.playAll());
     bool TotalCardesTaken = p1.cardesTaken() + p2.cardesTaken() == 52;
     bool EmptyStackSize = p1.stacksize() == 0 && p2.stacksize() == 0;
     CHECK(TotalCardesTaken);
